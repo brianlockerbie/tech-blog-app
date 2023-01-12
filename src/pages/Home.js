@@ -15,9 +15,20 @@ const Home = () => {
     getPosts();
   });
   return (
-    <div className="homepage"> 
+    <div className="homePage"> 
       {postLists.map((post) => {
-        return <div className="post"> {post.title}</div>;
+        return (
+          <div className="post">
+            {" "}
+            <div className="postHeader"> 
+              {" "}
+              <div className="title"> 
+                {" "}
+                <h1> {post.title}</h1> 
+              </div>
+            </div>
+          </div>
+        );
     })}
   </div>
   );
